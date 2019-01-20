@@ -1,6 +1,7 @@
 import Controller from '@ember/controller';
 import Band from '../models/band';
 import { empty } from '@ember/object/computed';
+import { A } from '@ember/array';
 
 export default Controller.extend({
   isAddingBand: false,
@@ -20,7 +21,7 @@ export default Controller.extend({
 
     saveBand(event) {
       event.preventDefault();
-      let newBand = Band.create({ name: this.newBandName });
+      let newBand = Band.create({ name: this.newBandName, songs:  A([])});
       this.model.pushObject(newBand);
       this.set('newBandName', '');
     }
