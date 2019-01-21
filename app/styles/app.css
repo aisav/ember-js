@@ -97,3 +97,6 @@ a {
 .rr-band-link.active > .rr-pointer {
   display: inline-block;
 }
+.rating-panel > .rating-star {
+  cursor: pointer;
+}
